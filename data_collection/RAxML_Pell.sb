@@ -1,0 +1,22 @@
+#!/bin/bash --login
+#Script to generate maximum likelihood phylogenies using RAxML (https://github.com/stamatak/standard-RAxML)
+ 
+########## Define Resources Needed with SBATCH Lines ##########
+#SBATCH --time=168:00:00		
+#SBATCH --ntasks=1		    
+#SBATCH --cpus-per-task=35	
+#SBATCH --mem=50G     		
+#SBATCH --job-name=RAxML_500	
+#SBATCH --account=Manning
+#SBATCH --output=%x-%j.SLURMout	
+
+########## Modules to Load ##########
+module load icc/2019.1.144-GCC-8.2.0-2.31.1  impi/2018.4.274
+module load RAxML/8.2.12-hybrid-avx2
+
+########## Code to Run ###########
+#navigate to desired output directory
+cd /mnt/scratch/pellmacy/raxml_output
+
+##Running RAxML:
+raxmlHPC -s /mnt/scratch/pellmacy/GBS_raxml_input/GBS_alignment.fas.reduced -n GBS_output_500.nwk -N 500 -T 20 -m GTRGAMMA -p 11713 -x 11713 -f a 
