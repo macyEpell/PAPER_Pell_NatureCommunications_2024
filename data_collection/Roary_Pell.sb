@@ -1,0 +1,31 @@
+##Script to calculate the pangenome across annotated assembled GBS genomes using Roary (https://sanger-pathogens.github.io/Roary/)
+
+#!/bin/bash --login
+ 
+########## Define Resources Needed with SBATCH Lines ##########
+#SBATCH --time=24:00:00		
+#SBATCH --ntasks=1		    
+#SBATCH --cpus-per-task=10	
+#SBATCH --mem=100G     		
+#SBATCH --job-name=GB-roary_MMR
+#SBATCH --account=Manning
+#SBATCH --output=%x-%j.SLURMout
+	
+	
+
+########## Modules to Load ##########
+#created a conda environment with Roary installed
+module load Conda
+
+########## Code to Run ###########
+
+#activate conda environment
+conda activate roary
+
+##Running Roary:
+#-f specifies output directory
+# -e create a multiFASTA alignment of core genes using PRANK
+# -n fast core gene alignment with MAFFT
+# -v verbose output
+# input files are annotated assembled genomes (output from Prokka) in .gff format
+roary -f /mnt/scratch/pellmacy/roary_output/ -e -n -v /mnt/scratch/pellmacy/roary_input/*.gff
