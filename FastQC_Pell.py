@@ -1,6 +1,7 @@
 ###Script for assessing sequence read quality using FastQC (https://github.com/s-andrews/FastQC)
 
-#on HPCC module load Conda/3 to activate the virtual environment with biopython and associated program installed
+#on HPCC, module load Conda/3 to activate the virtual environment with biopython and associated program installed
+# conda activate trimQC
 
 import os  
 import urllib
@@ -20,8 +21,8 @@ for i in GBS_Genomes_pair:
 	print (i)
 	pairGenome = i.split("\t")  
 	RefGenome = str(pairGenome[0])  
-	#use the "mkdir_Pell.py" script to make directories for each "+RefGenome+" so that the fastqc output will be organized into a separate directory for each isolate
-	#the --outdir path should be towards these new directories
-	#prior files paths should be where the trimmed (i.e. Trimmomatic output files) files are located
+	
+	#Running FastQC:
+	#Input files = trimmed reads (i.e. Trimmomatic output)
 	os.system("fastqc /mnt/home/pellmacy/Documents/trimmed-reads/" +RefGenome+ "_s1_* /mnt/home/pellmacy/Documents/trimmed-reads/"+RefGenome+"_s2_* --outdir=/mnt/home/pellmacy/Documents/quality-control/fastQC/")
 	print(RefGenome + "_DONE")
