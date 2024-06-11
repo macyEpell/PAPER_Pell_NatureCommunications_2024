@@ -11,6 +11,9 @@ The raw sequencing reads for all genomes examined in this study are available on
 * All BioProject, BioSample, and Genome ID information along with isolate and sequencing characteristics are listed in supplementary tables 1 and 2 associated with the manuscript
 
 ### Citation
+[View the preprint here!](https://www.biorxiv.org/content/10.1101/2024.04.01.587590v1)
+
+Pell, M.E.; Blankenship, H.M.; Gaddy, J.A.; Davies, H.D.; Manning, S.D. Intrapartum Antibiotic Prophylaxis Selects for Mutators in Group B Streptococci among Persistently Colonized Patients. bioRxiv 2024, 2024.04.01.587590, doi:10.1101/2024.04.01.587590.
 
 ### Abstract
 Through vaginal colonization, GBS causes severe pregnancy outcomes including neonatal sepsis and meningitis. Although intrapartum antibiotic prophylaxis (IAP) has reduced early-onset disease rates, persistent GBS colonization has been observed in patients following prophylaxis. To determine whether IAP selects for genomic signatures that enhance GBS survival and persistence in the vaginal tract, whole-genome sequencing was performed on 97 isolates from 58 patients before (prenatal) and after (postpartum) IAP/childbirth. Core-gene mutation analysis identified 7,025 mutations between the paired isolates. Three postpartum isolates accounted for 98% of mutations and were classified as “mutators” because of point mutations within DNA repair systems. In vitro assays revealed stronger biofilms in two mutators. These findings suggest that antibiotics select for mutations that promote survival in vivo, which increases the likelihood of transmission to neonates. They also demonstrate how mutators can provide a reservoir of beneficial mutations that enhance fitness and genetic diversity in the GBS population.
