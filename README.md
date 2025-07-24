@@ -1,4 +1,4 @@
-# PAPER_Pell_NatureCommunications_2024:
+# Pell_GBS_Genomics:
 This repository contains scripts used to collect and analyze data from whole genome sequences of clinical _Streptococcus agalactiae_ isolates for the following manuscript. 
 
 ## Intrapartum antibiotic prophylaxis selects for mutators in group B streptococci among persistently colonized patients.
